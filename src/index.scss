@@ -1,0 +1,191 @@
+$text-color: #797f7f;
+$headings-color: #131313;
+$btn-primary-bg: #2f2f2f;
+$btn-primary-color: #fff;
+$primary: #2f2f2f;
+$secondary: #cacaca;
+$border-radius-base: 0px;
+
+@import './styles/bootstrap/bootstrap';
+
+body {
+  color: $text-color;
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: 'YuGothic'
+}
+
+.muted {
+  color: #cacaca;
+}
+
+input[type="text"], 
+input[type="tel"], 
+input[type="number"], 
+input[type="email"], 
+input[type="password"], 
+input[type="radio"], 
+input[type="checkbox"],
+textarea, 
+select {
+  border: 1px solid #b9b9af;
+  padding: 10px 10px;
+  height: 46px;
+  background-color: #fff;
+  -moz-border-radius: $border-radius-base;
+  -webkit-border-radius: $border-radius-base;
+  -khtml-border-radius: $border-radius-base;
+  border-radius: $border-radius-base;
+  outline: none;
+  &:focus, &:hover, &:visited, &:active, &:checked, &:not(:checked){
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+  padding: 0; 
+}
+
+
+input[type="text"], 
+input[type="tel"], 
+input[type="number"], 
+input[type="email"], 
+input[type="password"], 
+select,
+textarea {
+  width: 100%;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.select.select-block {
+  display: block;
+  width: 100%;
+  select {
+    width: 100%;
+  }
+}
+
+.select select {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 2em;
+}
+
+.select:before {
+  content: '\25bc';
+  position: absolute;
+  pointer-events: none;
+  color: #82888a;
+  top: 0;
+  bottom: 1px;
+  padding-top: 0.7em;
+  line-height: 1;
+  right: 0;
+  width: 2em;
+  text-align: center;
+  transform: scale(0.84, 0.42);
+  -webkit-transform: scale(0.84, 0.42);
+  -moz-transform: scale(0.84, 0.42);
+  -ms-transform: scale(0.84, 0.42);
+  -o-transform: scale(0.84, 0.42);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.84, M12=0, M21=0, M22=0.42, SizingMethod='auto expand')";
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.84, M12=0, M21=0, M22=0.42, SizingMethod='auto expand');
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: white\0 !important;
+}
+
+.invalid[type="text"], 
+.invalid[type="password"], 
+.invalid[type="search"], 
+.invalid[type="email"], 
+.invalid[type="url"], 
+.invalid[type="number"], 
+.invalid[type="tel"], 
+textarea.invalid, 
+select.invalid, 
+input.invalid[type="radio"], 
+input.invalid[type="checkbox"], 
+[type="text"]:invalid, [type="password"]:invalid, 
+[type="search"]:invalid, [type="email"]:invalid, 
+[type="url"]:invalid, [type="number"]:invalid, 
+[type="tel"]:invalid, 
+textarea:invalid, 
+select:invalid, 
+input[type="radio"]:invalid, 
+input[type="checkbox"]:invalid {
+  border-color: #ffb400;
+  background-color: #fff8e5;
+  &:focus {
+    border-color: #ffb400;
+  }
+}
+
+label {
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 8px;
+}
+
+label.invalid {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: #ffb400;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+input[type="radio"] {
+  -webkit-border-radius: 1.25em;
+  -moz-border-radius: 1.25em;
+  border-radius: 1.25em;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+
+input[type="checkbox"]:checked:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  position: absolute;
+  font-size: 1em;
+  left: 0;
+  text-align: center;
+  width: 1.5em;
+  color: #f27242;
+  top: 0;
+}
+
+input[type="radio"]:checked:before {
+  content: "";
+  position: absolute;
+  height: 0.45em;
+  width: 0.45em;
+  -webkit-border-radius: 0.45em;
+  -moz-border-radius: 0.45em;
+  border-radius: 0.45em;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.225em;
+  margin-left: -0.225em;
+  background-color: #f27242;
+}
+
+input::placeholder {
+  color: #b9b9af;
+}
