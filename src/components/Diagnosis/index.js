@@ -88,7 +88,7 @@ const getEvaluationForFemale = (bmi, fatRate) => {
   }
   if (fatRate < 30) {
     if (bmi < 18) return "痩せていますががやや脂肪率が高めです。内蔵脂肪が多めの可能性が高いです。食生活に気をつけることでより理想的な体型に近づきます。"
-    if (bmi < 22) return "やや脂肪率が高めです。筋肉を維持しつつ体重を減らすことでより理想的な体型が近づきます。"
+    if (bmi < 22) return "バランスの良い体型ですが、やや脂肪率が高めです。筋肉を維持しつつ体重を減らすことでより理想的な体型が近づきます。"
     return "やや脂肪率が高めです。筋肉量を維持しつつ脂肪率を落とすことで理想的な体型が手に入ります。"
   }
   if (bmi < 18) return "痩せていますがが脂肪率が高めです。内蔵脂肪が多い可能性が高いです。食生活に気をつけることでより理想的な体型に近づきます。"
@@ -106,7 +106,7 @@ export default class extends Component {
     idealWeight: null
   }
 
-  handleSubmit = (values) => {
+  handleSubmit = (values, actions) => {
     const {
       fatRate,
       height,
@@ -126,6 +126,8 @@ export default class extends Component {
       evaluation,
       showResult: true
     })
+    actions.setSubmitting(false);
+    actions.setErrors({})
   }
 
   render() {

@@ -53,7 +53,6 @@ const CustomLabel = styled.label({
 export default class extends Component {
 
   validate = (values) => {
-    console.log("validating")
     const { 
       gender,
       age,
@@ -81,7 +80,7 @@ export default class extends Component {
 
   handleSubmit = (values, actions) => {
     console.log(values);
-    this.props.handleSubmit(values);
+    this.props.handleSubmit(values, actions);
   }
 
   render() {
