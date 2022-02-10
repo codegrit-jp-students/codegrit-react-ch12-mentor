@@ -7,7 +7,7 @@
     "@emotion/css": "^10.0.9",
     "@emotion/styled": "^10.0.11",
     "formik": "^1.5.7",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
